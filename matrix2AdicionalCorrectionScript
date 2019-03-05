@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+// ALGORITYM EXAMPLE,
+
+// BEST WAY TO SOLVE THIS PROBLEM
+float getResultRemake(float m[2][2]){
+  float aux = 0;
+  float h = 0;
+  for (size_t i = 0; i < 3; i++) {
+    for (size_t j = 0; j < 3; j++) {
+      aux += (1 / m[i][j]);
+    }
+  }
+  return h = 9 / aux;
+}
+
+
+// WAY THAT I'VE CHOOSE TO COMPLETE THE EXERCICIE
+float getResultOld(float m[2][2]){
+  float h = 0;
+  h = 9 / ((1/m[0][0]) + (1/m[0][1]) + (1/m[0][2]) + (1/m[1][0]) + (1/m[1][1]) + (1/m[1][2]) + (1/m[2][0]) + (1/m[2][1]) + (1/m[2][2]));
+}
+
+
+float main(void){
+  float m[2][2];
+  // INSERT OF DATA TO WORK ANT TEST THE SOLUTION CREATED
+  for (size_t a = 0; a < 3; a++) {
+    for (size_t b = 0; b < 3; b++) {
+      m[a][b];// = a + b;
+    }
+  }
+
+  // PRINT INFORMATION ABOUT THE PROBLEM SOLUTION
+  printf("Resultado antigo: %d\n", getResultOld(m));
+  printf("\nResultado refeito: %d\n", getResultRemake(m));
+}
